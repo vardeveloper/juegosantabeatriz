@@ -1,0 +1,30 @@
+##NOTA
+======
+
+Dosc
+https://docs.laravelvoyager.com/
+
+Credentials
+admin@admin.com
+password
+
+===============================================================================
+
+- editar campo decimal en productos desde la DB
+
+
+TODO
+- relation product with category
+- create view of all pages
+- code home
+- code search
+- code list products
+- code detail product
+- edit logo (done)
+- code form contact
+- maps of contact
+- create repository (done)
+- ask for information to alfredo
+- buy domain and hosting
+
+
