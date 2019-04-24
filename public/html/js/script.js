@@ -2194,5 +2194,6 @@
 				event.preventDefault();
 			});
 		}
+
 	});
 }());

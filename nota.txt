@@ -12,19 +12,23 @@ password
 
 - editar campo decimal en productos desde la DB
 
+TABLES
+- banners
+- customer_logo
+- products
+
+php artisan migrate:generate banners,customer_logo,products
+php artisan migrate:refresh
+
 
 TODO
+- buy domain and hosting
+- export database
+- maps of contact
+- template mail contact
 - relation product with category
 - create view of all pages
 - code home
 - code search
 - code list products
 - code detail product
-- edit logo (done)
-- code form contact
-- maps of contact
-- create repository (done)
-- ask for information to alfredo
-- buy domain and hosting
-
-

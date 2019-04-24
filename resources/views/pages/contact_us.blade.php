@@ -28,8 +28,9 @@
                         </div>
                     </article>
 
-                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{{ route('sendmail') }}">
                         <div class="row row-10 row-narrow">
+                            @csrf
                             <div class="col-md-6">
                                 <div class="form-wrap">
                                     <label class="form-label" for="form-user-name-1">Your Name</label>
