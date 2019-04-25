@@ -76,7 +76,7 @@
                                             <td height="30" style="height: 30px; line-height:30px;"></td>
                                         </tr>
                                         <tr>
-                                            <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 32px; mso-line-height-rule: exactly; line-height: 32px; font-weight: 400; letter-spacing: 1px;color: #ffffff;">Notification</td>
+                                            <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 32px; mso-line-height-rule: exactly; line-height: 32px; font-weight: 400; letter-spacing: 1px;color: #ffffff;">Notificaciones</td>
                                         </tr>
                                         <tr>
                                             <td height="30" style="height: 30px; line-height:30px;"></td>
@@ -91,7 +91,7 @@
                                             <td height="30" style="height: 30px; line-height:30px;"></td>
                                         </tr>
                                         <tr>
-                                            <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 22px; font-weight: 400;color: #302f35;">Hi, someone left a message for you at <!-- #{SiteName} --></td>
+                                            <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 22px; font-weight: 400;color: #302f35;">Hola, alguien te dejó un mensaje en {{ $app_url }}</td>
                                         </tr>
                                         <tr>
                                             <td height="20" style="height: 20px; line-height:20px;"></td>
@@ -125,7 +125,7 @@
                                         </tr>
                                         <tr>
                                             <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 24px; mso-line-height-rule: exactly; line-height: 30px; font-weight: 700;color: #302f35;">
-                                                <!-- #{Subject} -->
+                                                <!-- #{Subject} --> Contacto
                                             </td>
                                         </tr>
                                         <tr>
@@ -138,15 +138,19 @@
                                                         <td align="center" valign="top">
                                                             <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
                                                                 <tr>
-                                                                    <td width="110" align="left" valign="top" style="padding: 0 10px 0 0;font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"><!-- #{FromState} --></td>
-                                                                    <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;"><!-- #{FromEmail} --></td>
+                                                                    <td width="110" align="left" valign="top" style="padding: 0 10px 0 0;font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"> Nombre </td>
+                                                                    <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;"> {{ $name }} </td>
                                                                 </tr>
                                                                 <!-- #{BeginInfo} -->
                                                                 <tr>
-                                                                    <td width="110" align="left" valign="top" style="padding: 0 10px 0 0;font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"><!-- #{InfoState} --></td>
-                                                                    <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;"><!-- #{InfoDescription} --></td>
+                                                                    <td width="110" align="left" valign="top" style="padding: 0 10px 0 0;font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"> Email </td>
+                                                                    <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;"> {{ $email }} </td>
                                                                 </tr>
                                                                 <!-- #{EndInfo} -->
+                                                                <tr>
+                                                                    <td width="110" align="left" valign="top" style="padding: 0 10px 0 0;font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"> Teléfono </td>
+                                                                    <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;"> {{ $phone }} </td>
+                                                                </tr>
                                                             </table>
                                                         </td>
                                                     </tr>
@@ -154,11 +158,11 @@
                                                         <td height="12" style="height: 12px; line-height:12px;"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"><!-- #{MessageState} --></td>
+                                                        <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;font-weight: 700;"> Mensaje </td>
                                                     </tr>
                                                     <tr>
                                                         <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 20px; font-weight: 400;color: #302f35;">
-                                                            <!-- #{MessageDescription} -->
+                                                            {{ $msg }}
                                                         </td>
                                                     </tr>
                                                 </table>

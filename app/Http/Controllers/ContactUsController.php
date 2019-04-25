@@ -17,11 +17,13 @@ class ContactUsController extends Controller
         if ($request->isMethod('post')) {
 
             $data = $request->all();
+            $data['app_url'] = env('APP_URL', 'http://juegosantabeatriz.pe');
+            //dd($data);
 
             $name	 = filter_var($data["name"], FILTER_SANITIZE_STRING);
             $email	 = filter_var($data["email"], FILTER_SANITIZE_EMAIL);
             $phone	 = filter_var($data["phone"], FILTER_SANITIZE_STRING);
-            $message = filter_var($data["message"], FILTER_SANITIZE_STRING);
+            $message = filter_var($data["msg"], FILTER_SANITIZE_STRING);
 
 
             if (strlen($name) < 2) {

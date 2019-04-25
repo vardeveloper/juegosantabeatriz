@@ -46,7 +46,7 @@
                             <div class="col-sm-12">
                                 <div class="form-wrap">
                                     <label class="form-label" for="form-message">Message</label>
-                                    <textarea class="form-input" id="form-message" name="message" data-constraints="@Required"></textarea>
+                                    <textarea class="form-input" id="form-message" name="msg" data-constraints="@Required"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">

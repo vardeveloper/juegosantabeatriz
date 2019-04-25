@@ -17,6 +17,16 @@ TABLES
 - customer_logo
 - products
 
+// comentar el contenido de la function init cuando se ejecute composer install
+// por priera vez, osea, cuando se clone el proyecto
+app/Providers/AppServiceProvider.php
+
+// verificar puerto para visualizar imagenes
+(APP_URL=http://localhost:8001)
+
+//no se puede imprimir en una vista el nombre $message porque lo toma como un helpers
+// en esta version no estan los herlpers de laravel
+
 php artisan migrate:generate banners,customer_logo,products
 php artisan migrate:refresh
 
