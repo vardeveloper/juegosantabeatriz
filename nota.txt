@@ -24,7 +24,6 @@ php artisan migrate:refresh
 TODO
 - buy domain and hosting
 - export database
-- maps of contact
 - template mail contact
 - relation product with category
 - create view of all pages

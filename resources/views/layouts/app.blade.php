@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('html/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('html/css/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('html/css/style.css') }}" id="main-styles-link">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 </head>
 
 <body>
@@ -54,6 +56,8 @@
 </div>
 <!-- Global Mailform Output-->
 <div class="snackbars" id="form-output-global"> </div>
+<!-- map -->
+<script src="{{ asset('html/js/map.js') }}"></script>
 <!-- Javascript-->
 <script src="{{ asset('html/js/core.min.js') }}"></script>
 <script src="{{ asset('html/js/script.js') }}"></script>

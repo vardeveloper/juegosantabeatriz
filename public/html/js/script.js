@@ -65,7 +65,7 @@
 			radioPanel: $('.radio-panel .radio-inline'),
 			slick: $('.slick-slider'),
 			videoOverlay: $('.video-overlay'),
-			maps: $(".google-map-container"),
+			//maps: $(".google-map-container"),
 			scroll: $(".page-scroll a"),
 		};
 
@@ -2076,6 +2076,7 @@
 		}
 
 		// Google maps
+		/*
 		if( plugins.maps.length ) {
 			$.getScript("//maps.google.com/maps/api/js?key=AIzaSyAwH60q5rWrS8bXwpkZwZwhw9Bw0pqKTZM&sensor=false&libraries=geometry,places&v=3.7", function () {
 				var head = document.getElementsByTagName('head')[0],
@@ -2183,6 +2184,7 @@
 				}
 			});
 		}
+		*/
 
 		// Page scroll
 		if (plugins.scroll.length) {
