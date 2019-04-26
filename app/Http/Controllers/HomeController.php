@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $banners = Banner::all();
-        $categories = Category::orderBy('order', 'asc')->get();
+        $categories = Category::where('spotlight', 1)->orderBy('order', 'asc')->get();
         $products = Product::all();
 
         return view('pages.home', compact('banners', 'products', 'categories'));

@@ -34,6 +34,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('logos', $logos);
 
         $categories = Category::orderBy('order', 'asc')->get();
-        View::share('categories', $categories);
+        View::share('headerCategories', $categories);
     }
 }
