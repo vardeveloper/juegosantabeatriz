@@ -161,7 +161,7 @@
                                 <ul class="rd-menu rd-navbar-dropdown">
                                     @foreach ($headerCategories as $category)
                                     <li class="rd-dropdown-item">
-                                        <a class="rd-dropdown-link" href="{{ route('product.index', $category->slug) }}">{{ $category->name }}</a>
+                                        <a class="rd-dropdown-link" href="{{ route('product.list', $category->slug) }}">{{ $category->name }}</a>
                                     </li>
                                     @endforeach
                                 </ul>

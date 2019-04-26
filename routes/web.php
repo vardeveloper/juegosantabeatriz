@@ -17,13 +17,13 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('nosotros/', 'AboutUsController@index')->name('about');
+Route::get('nosotros', 'AboutUsController@index')->name('about');
 
-Route::get('contacto/', 'ContactUsController@index')->name('contact');
+Route::get('contacto', 'ContactUsController@index')->name('contact');
 
 Route::post('sendmail', 'ContactUsController@sendmail')->name('sendmail');
 
-Route::get('productos/{category}', 'ProductController@index')->name('product.index');
+Route::get('productos/{category}', 'ProductController@list')->name('product.list');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
