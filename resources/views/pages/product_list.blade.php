@@ -6,11 +6,11 @@
 <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
   <div class="parallax-content breadcrumbs-custom context-dark">
     <div class="container">
-      <h3 class="breadcrumbs-custom-title">Grid Shop</h3>
+      <h3 class="breadcrumbs-custom-title">{{ $categoria->name }}</h3>
       <ul class="breadcrumbs-custom-path">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li class="active">Grid Shop</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="{{ route('product.list', $categoria->slug) }}">Categoría</a></li>
+        <li class="active">{{ $categoria->name }}</li>
       </ul>
     </div>
   </div>
@@ -26,7 +26,7 @@
           <div class="col-md-6 col-xl-12">
             <article class="heading-component">
               <div class="heading-component-inner">
-                <h5 class="heading-component-title">Categories
+                <h5 class="heading-component-title">Categorías
                 </h5>
               </div>
             </article>
@@ -50,7 +50,7 @@
         <!-- Heading Component-->
         <article class="heading-component">
           <div class="heading-component-inner">
-            <h5 class="heading-component-title">Product catalog
+            <h5 class="heading-component-title">{{ $categoria->name }}
             </h5>
             <!--div class="heading-component-aside">
               <ul class="list-inline list-inline-xs list-inline-middle">
@@ -82,16 +82,14 @@
         </article>
 
         <div class="row row-30">
-
+          @if (!empty($products))
+          @foreach ($products as $product)
           <div class="col-md-6 col-lg-4">
             <article class="product product-sm">
               <header class="product-header">
-                <!-- Badge-->
-                <!--div class="badge badge-red">
-                  hot<span class="icon material-icons-whatshot"></span>
-                </div-->
+                <!--div class="badge badge-red">hot<span class="icon material-icons-whatshot"></span></div-->
                 <div class="product-figure">
-                  <img src="images/shop/product-small-1.png" alt=""/>
+                  <img src="{{ Voyager::image($product->thumbnail('cropped')) }}" alt=""/>
                 </div>
                 <div class="product-buttons">
                   <!--div class="product-button product-button-share fl-bigmug-line-share27" style="font-size: 22px">
@@ -104,16 +102,16 @@
                     </ul>
                   </div-->
                   <!--a class="product-button fl-bigmug-line-shopping202" href="shopping-cart.html" style="font-size: 26px"></a-->
-                  <a class="product-button fl-bigmug-line-zoom60" href="images/shop/product-1-original.jpg" data-lightgallery="item" style="font-size: 25px"></a>
+                  <a class="product-button fl-bigmug-line-zoom60" href="{{ Voyager::image($product->image) }}" data-lightgallery="item" style="font-size: 25px"></a>
                 </div>
               </header>
               <footer class="product-content">
                 <h6 class="product-title">
-                  <a href="product-page.html">  </a>
+                  <a href="product-page.html"> {{ $product->name }} </a>
                 </h6>
                 <div class="product-price">
                   <!--span class="product-price-old">$400</span-->
-                  <span class="heading-6 product-price-new">  </span>
+                  <span class="heading-6 product-price-new"> s/{{ $product->price }} </span>
                 </div>
                 <!--ul class="product-rating">
                   <li><span class="material-icons-star"></span></li>
@@ -125,18 +123,14 @@
               </footer>
             </article>
           </div>
-
-
+          @endforeach
+          @endif
         </div>
+
         <nav class="pagination-wrap" aria-label="Page navigation">
-          <ul class="pagination">
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><span class="page-link">...</span></li>
-            <li class="page-item"><a class="page-link" href="#">14</a></li>
-          </ul>
+          {{ $products->links() }}
         </nav>
+
       </div>
 
 

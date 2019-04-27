@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-//use TCG\Voyager\Models\Category;
+use App\Category;
 
 class ProductController extends Controller
 {
@@ -15,11 +15,26 @@ class ProductController extends Controller
 
     public function list(Request $request)
     {
+        //dd($request->category);
 
-        dd($request->category);
-        //$category = Category::findOrFail($category->slug);
-        //$products = Product::orderBy('order', 'desc')->get();
-        $products;
-        return view('pages.product_list', compact('products'));
+        $categoria = Category::where('slug', $request->category)->firstOrFail();
+        //dd($categoria->toArray());
+
+        $products = Product::where('category_id', $categoria->id)
+            ->where('status', 1)
+            ->orderBy('id', 'desc')
+            ->paginate(12);
+        //dd($products->toArray());
+
+        foreach ($products as $product) {
+            $images = json_decode($product->images);
+            foreach ($images as $image) {
+                $product->image = $image;
+                break;
+            }
+        }
+
+        return view('pages.product_list', compact('products', 'categoria'));
     }
+
 }

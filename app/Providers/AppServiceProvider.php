@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\Banner;
 use App\CustomerLogo;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Models\Category;
 
 class AppServiceProvider extends ServiceProvider
@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Voyager::useModel('Category', \App\Category::class);
     }
 
     /**
