@@ -25,6 +25,8 @@ Route::post('sendmail', 'ContactUsController@sendmail')->name('sendmail');
 
 Route::get('productos/{category}', 'ProductController@list')->name('product.list');
 
+Route::get('producto/{slug}', 'ProductController@show')->name('product.show');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

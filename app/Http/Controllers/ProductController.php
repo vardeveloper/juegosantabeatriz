@@ -37,4 +37,11 @@ class ProductController extends Controller
         return view('pages.product_list', compact('products', 'categoria'));
     }
 
+    public function show (Request $request)
+    {
+        $product = Product::where('slug', $request->slug)->where('status', 1)->firstOrFail();
+        $product->imagenes = json_decode($product->images);
+        return view('pages.product_show', compact($product));
+    }
+
 }

@@ -60,7 +60,7 @@
                                 </header>
                                 <footer class="product-content">
                                     <h6 class="product-title">
-                                        <a href="product-page.html">{{ $product['name'] }}</a>
+                                        <a href="{{ route('product.show', $product['slug']) }}">{{ $product['name'] }}</a>
                                     </h6>
                                     <div class="product-price">
                                         <!--span class="product-price-old">$400</span-->
