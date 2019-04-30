@@ -41,7 +41,7 @@ class ProductController extends Controller
     {
         $product = Product::where('slug', $request->slug)->where('status', 1)->firstOrFail();
         $product->imagenes = json_decode($product->images);
-        return view('pages.product_show', compact($product));
+        return view('pages.product_show', compact('product'));
     }
 
 }

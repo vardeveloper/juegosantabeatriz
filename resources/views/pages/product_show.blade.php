@@ -51,7 +51,7 @@
                         </ul>
                     </div>
                     <div class="product-single-text">
-                        <p>{{ $product->detail }}</p>
+                        <p>{{ $product->excerpt }}</p>
                     </div>
                     <!--ul class="product-single-info">
                         <li>
@@ -142,9 +142,9 @@
                     <!--li class="nav-item" role="tab"><a class="nav-link" href="#tabs-product-2" data-toggle="tab">customer reviews</a></li-->
                 </ul>
                 <!-- Tab panes-->
-                <div-- class="tab-content">
+                <div class="tab-content">
                     <div class="tab-pane active show fade" id="tabs-product-1" role="tabpanel">
-                        <p>{{ $product->description }}</p>
+                        {!! $product->description !!}
                     </div>
                     <!--div class="tab-pane fade" id="tabs-product-2" role="tabpanel">
                         <div class="product-comment">
