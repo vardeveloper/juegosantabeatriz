@@ -3,7 +3,7 @@
 @section('content')
 
   <!-- Section Breadcrumbs-->
-  <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
+  <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="{{ asset('html/images/bg-breadcrumbs-1-1920x726.jpg') }}">
     <div class="parallax-content breadcrumbs-custom context-dark">
       <div class="container">
         <h3 class="breadcrumbs-custom-title">{{ $categoria->name }}</h3>
@@ -50,8 +50,7 @@
           <!-- Heading Component-->
           <article class="heading-component">
             <div class="heading-component-inner">
-              <h5 class="heading-component-title">{{ $categoria->name }}
-              </h5>
+              <h5 class="heading-component-title">{{ $categoria->name }}</h5>
               <!--div class="heading-component-aside">
                 <ul class="list-inline list-inline-xs list-inline-middle">
                   <li>

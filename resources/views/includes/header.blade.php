@@ -134,10 +134,10 @@
                             <!-- RD Navbar Search-->
                             <div class="rd-navbar-search">
                                 <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                                <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                                <form class="rd-search" action="{{ route('product.search') }}" data-search-live="rd-search-results-live" method="GET" lang="es">
                                     <div class="form-wrap">
-                                        <label class="form-label" for="rd-navbar-search-form-input">Enter your search request here...</label>
-                                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                                        <label class="form-label" for="rd-navbar-search-form-input">Buscar productos</label>
+                                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off" required>
                                         <div class="rd-search-results-live" id="rd-search-results-live"></div>
                                     </div>
                                     <button class="rd-search-form-submit fl-budicons-launch-search81" type="submit"></button>

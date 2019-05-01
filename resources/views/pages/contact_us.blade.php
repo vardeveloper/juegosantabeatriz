@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Section Breadcrumbs-->
-    <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
+    <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="{{ asset('html/images/bg-breadcrumbs-1-1920x726.jpg') }}">
         <div class="parallax-content breadcrumbs-custom context-dark">
             <div class="container">
                 <h3 class="breadcrumbs-custom-title">Contact Us</h3>
@@ -95,3 +95,12 @@
     </div>
 
 @endsection
+
+@push('head-map')
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+@endpush
+
+@push('scripts-map')
+<script src="{{ asset('html/js/map.js') }}"></script>
+@endpush

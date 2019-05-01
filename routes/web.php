@@ -27,6 +27,8 @@ Route::get('productos/{category}', 'ProductController@list')->name('product.list
 
 Route::get('producto/{slug}', 'ProductController@show')->name('product.show');
 
+Route::get('buscar/{term?}', 'ProductController@search')->name('product.search');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

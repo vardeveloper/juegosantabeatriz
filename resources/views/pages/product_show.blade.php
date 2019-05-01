@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Section Breadcrumbs-->
-    <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="images/bg-breadcrumbs-1-1920x726.jpg">
+    <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="{{ asset('html/images/bg-breadcrumbs-1-1920x726.jpg') }}">
         <div class="parallax-content breadcrumbs-custom context-dark">
             <div class="container">
                 <h3 class="breadcrumbs-custom-title">{{ $product->name }}</h3>

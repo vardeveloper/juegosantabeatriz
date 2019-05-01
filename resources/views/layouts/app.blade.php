@@ -14,53 +14,52 @@
     <link rel="stylesheet" href="{{ asset('html/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('html/css/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('html/css/style.css') }}" id="main-styles-link">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    @stack('head-map')
 </head>
 
 <body>
-<style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-<div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-<div id="preloader">
-    <div class="preloader-body">
-        <div class="preloader-item"> </div>
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div id="preloader">
+        <div class="preloader-body">
+            <div class="preloader-item"> </div>
+        </div>
     </div>
-</div>
-<!-- Page-->
-<div class="page">
-    <!-- Page Header-->
-    @include('includes.header')
+    <!-- Page-->
+    <div class="page">
+        <!-- Page Header-->
+        @include('includes.header')
 
-    <!-- Page Content-->
-    @yield('content')
+        <!-- Page Content-->
+        @yield('content')
 
-    <!-- Page Footer-->
-    @include('includes.footer')
+        <!-- Page Footer-->
+        @include('includes.footer')
 
-    <!-- Modal Video-->
-    <div class="modal modal-video fade" id="modal1" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/vafBxDdRRRE"> </iframe>
+        <!-- Modal Video-->
+        <!--div class="modal modal-video fade" id="modal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/vafBxDdRRRE"> </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div-->
 
-</div>
-<!-- Global Mailform Output-->
-<div class="snackbars" id="form-output-global"> </div>
-<!-- map -->
-<script src="{{ asset('html/js/map.js') }}"></script>
-<!-- Javascript-->
-<script src="{{ asset('html/js/core.min.js') }}"></script>
-<script src="{{ asset('html/js/script.js') }}"></script>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"> </div>
+    <!-- map -->
+    @stack('scripts-map')
+    <!-- Javascript-->
+    <script src="{{ asset('html/js/core.min.js') }}"></script>
+    <script src="{{ asset('html/js/script.js') }}"></script>
 </body>
 
 </html>
