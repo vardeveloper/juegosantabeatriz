@@ -18,6 +18,6 @@ var customIcon = L.icon({
 // marker object, pass custom icon as option, add to map
 //var marker = L.marker(coord, {icon: customIcon}).addTo(map);
 var marker = L.marker(coord).addTo(map)
-	.bindPopup('Juegos Santa Beatriz <br> Teodoro Cárdenas 787')
+	.bindPopup('Juegos Santa Beatriz <br> Jr. Teodoro Cárdenas 787')
 	.openPopup();
 

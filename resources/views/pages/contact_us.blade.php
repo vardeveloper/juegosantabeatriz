@@ -6,10 +6,10 @@
     <section class="section parallax-container breadcrumbs-wrap" data-parallax-img="{{ asset('html/images/bg-breadcrumbs-1-1920x726.jpg') }}">
         <div class="parallax-content breadcrumbs-custom context-dark">
             <div class="container">
-                <h3 class="breadcrumbs-custom-title">Contact Us</h3>
+                <h3 class="breadcrumbs-custom-title">Contacto</h3>
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active">Contact Us</li>
+                    <li class="active">Contacto</li>
                 </ul>
             </div>
         </div>
@@ -23,8 +23,7 @@
                     <!-- Heading Component-->
                     <article class="heading-component">
                         <div class="heading-component-inner">
-                            <h5 class="heading-component-title">Get in touch
-                            </h5>
+                            <h5 class="heading-component-title">Formulario de contacto</h5>
                         </div>
                     </article>
 
@@ -33,30 +32,30 @@
                             @csrf
                             <div class="col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label" for="form-user-name-1">Your Name</label>
+                                    <label class="form-label" for="form-user-name-1">Nombre</label>
                                     <input class="form-input" id="form-user-name-1" type="text" name="name" data-constraints="@Required">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label" for="form-user-phone">Phone</label>
+                                    <label class="form-label" for="form-user-phone">Teléfono</label>
                                     <input class="form-input" id="form-user-phone" type="text" name="phone" data-constraints="@Numeric @Required">
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-wrap">
-                                    <label class="form-label" for="form-message">Message</label>
+                                    <label class="form-label" for="form-message">Mensaje</label>
                                     <textarea class="form-input" id="form-message" name="msg" data-constraints="@Required"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-wrap">
-                                    <label class="form-label" for="form-email">E-mail</label>
+                                    <label class="form-label" for="form-email">Email</label>
                                     <input class="form-input" id="form-email" type="email" name="email" data-constraints="@Email @Required">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <button class="button button-lg button-primary button-block" type="submit">Send message</button>
+                                <button class="button button-lg button-primary button-block" type="submit">Enviar mensaje</button>
                             </div>
                         </div>
                     </form>
@@ -65,23 +64,38 @@
                     <!-- Heading Component-->
                     <article class="heading-component">
                         <div class="heading-component-inner">
-                            <h5 class="heading-component-title">Contact Details
-                            </h5>
+                            <h5 class="heading-component-title">Información de contacto</h5>
                         </div>
                     </article>
 
                     <div class="contact-list">
                         <dl>
-                            <dt>E-mail</dt>
-                            <dd><span class="icon icon-primary mdi mdi-email-outline"></span><a class="link" href="mailto:#">info@demolink.org</a></dd>
+                            <dt>Email</dt>
+                            <dd>
+                                <span class="icon icon-primary mdi mdi-email-outline"></span>
+                                <a class="link" href="#">{{ setting('site.email') }}</a>
+                            </dd>
                         </dl>
                         <dl>
-                            <dt>Address</dt>
-                            <dd><span class="icon icon-primary mdi mdi-map-marker"></span><a class="link" href="#">71 Pilgrim Avenue Chevy Chase, MD 20815</a></dd>
+                            <dt>Dirección</dt>
+                            <dd>
+                                <span class="icon icon-primary mdi mdi-map-marker"></span>
+                                <a class="link" href="#">{{ setting('site.address') }}</a>
+                            </dd>
                         </dl>
                         <dl>
-                            <dt>Phone</dt>
-                            <dd><span class="icon icon-primary mdi mdi-phone"></span><a class="link link-md" href="tel:#">+34 91 398 43 00</a></dd>
+                            <dt>WhatsApp</dt>
+                            <dd>
+                                <img src="{{ asset('html/images/WhatsApp.png') }}" width="32" style="margin-left: -32px" />
+                                <a class="link link-md" href="#">{{ setting('site.mobile') }}</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Teléfonos </dt>
+                            <dd>
+                                <span class="icon icon-primary mdi mdi-phone"></span>
+                                <a class="link link-md" href="#">{{ setting('site.phone') }}</a>
+                            </dd>
                         </dl>
                     </div>
                 </div>
