@@ -8,6 +8,7 @@ Credentials
 admin@admin.com
 password
 
+
 ===============================================================================
 
 - editar campo decimal en productos desde la DB
@@ -42,4 +43,4 @@ vendor/tcg/voyager/resources/views/partials/app-footer.blade.php
 
 
 TODO
-- 
+-

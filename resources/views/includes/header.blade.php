@@ -105,7 +105,7 @@
                                                 <img src="{{ asset('html/images/WhatsApp.png') }}" width="32" />
                                             </div>
                                             <div class="unit-body">
-                                                <h6>WhatsApp</h6><a class="link" href="#">{{ setting('site.phone') }}</a>
+                                                <h6>WhatsApp</h6><a class="link" href="#">{{ setting('site.mobile') }}</a>
                                             </div>
                                         </div>
                                     </li>
