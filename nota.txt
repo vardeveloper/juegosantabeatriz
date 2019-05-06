@@ -10,15 +10,11 @@ password
 
 Setup
 =====
-https://vijayasankarn.wordpress.com/2017/02/04/securely-setting-file-permissions-for-laravel-framework/
-https://stackoverflow.com/questions/30639174/how-to-set-up-file-permissions-for-laravel-5-and-others
-
+- setting file permissions web hosting windows laravel (google)
 - .htaccess
-- sudo chown -R www-data:www-data /path/to/your/laravel/root/directory
-- sudo find /path/to/your/laravel/root/directory -type f -exec chmod 644 {} \;
-- sudo find /path/to/your/laravel/root/directory -type d -exec chmod 755 {} \;
-- sudo chgrp -R www-data storage bootstrap/cache
-- sudo chmod -R ug+rwx storage bootstrap/cache
+- enlace a storage
+- find . -type d -exec chmod 755 {} \;
+- find . -type f -exec chmod 644 {} \;
 - sudo chmod -R 777 storage
 - sudo chmod -R 777 bootstrap/cache
 
