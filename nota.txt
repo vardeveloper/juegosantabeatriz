@@ -42,9 +42,4 @@ vendor/tcg/voyager/resources/views/partials/app-footer.blade.php
 
 
 TODO
-- buy domain and hosting
-- export database
-- code home (products by category) (done)
-- code list of products by category (done)
-- code detail product (done)
-- code search
+- 
