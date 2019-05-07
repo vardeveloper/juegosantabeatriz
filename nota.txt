@@ -8,6 +8,12 @@ CREDENTIALS
 admin@admin.com
 password
 
+EMAIL
+ventas@juegosantabeatriz.pe
+ventas@2019
+aazabache@hotmail.com
+aazabache@2019
+
 SETUP
 - PROJECT
     - always install barryvdh/laravel-debugbar in the project
@@ -18,7 +24,7 @@ SETUP
 - SERVER:
     - activate modulo php fileinfo
     - create file .htaccess
-    - create enlace storage
+    - create enlace storage (info.php)
 
 
 ===============================================================================

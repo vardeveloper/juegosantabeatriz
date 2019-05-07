@@ -1,4 +1,4 @@
-APP_NAME=Juegos Santa Beatriz
+APP_NAME=JSB
 APP_ENV=production
 APP_KEY=base64:wXuDsDXVNySUXLjNDCxPOuf9/rNuiWGanZD4lo9jC9c=
 APP_DEBUG=false

@@ -43,11 +43,16 @@ class ContactUsController extends Controller
             }
 
 
-            Mail::send('emails.contact', $data, function ($mail) use ($name) {
-                $mail->from('hola@juegosantabeatriz.pe', 'JUEGOS SANTA BEATRIZ');
-                $mail->to('vardeveloper@gmail.com');
+            Mail::send('emails.contact', $data, function ($mail) use ($name, $email) {
+                $mail->from('ventas@juegosantabeatriz.pe', 'Juegos Santa Beatriz');
+                $mail->to('ventas@juegosantabeatriz.pe');
                 $mail->subject('Contacto - ' . $name);
             });
+
+            // check for failures
+            if (Mail::failures()) {
+                return response('MF255', 200)->header('Content-Type', 'text/plain');
+            }
 
             return response('MF000', 200)->header('Content-Type', 'text/plain');
         }
