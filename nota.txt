@@ -1,25 +1,24 @@
 ##NOTA
 ======
 
-Dosc
+DOSC
 https://docs.laravelvoyager.com/
 
-Credentials
+CREDENTIALS
 admin@admin.com
 password
 
-Setup
-=====
-- setting file permissions web hosting windows laravel (google)
-- .htaccess
-- enlace a storage
-- find . -type d -exec chmod 755 {} \;
-- find . -type f -exec chmod 644 {} \;
-- sudo chmod -R 777 storage
-- sudo chmod -R 777 bootstrap/cache
-
-
-
+SETUP
+- PROJECT
+    - always install barryvdh/laravel-debugbar in the project
+    - find . -type d -exec chmod 755 {} \;
+    - find . -type f -exec chmod 644 {} \;
+    - sudo chmod -R 777 storage
+    - sudo chmod -R 777 bootstrap/cache
+- SERVER:
+    - activate modulo php fileinfo
+    - create file .htaccess
+    - create enlace storage
 
 
 ===============================================================================
@@ -35,7 +34,7 @@ app/Providers/AppServiceProvider.php
 
 // no declarar variables para la vista con el nombre de $message
 // porque lo toma como una variable de helpers
-// en esta version no estan los helpers en laravel
+// en esta version de laravel 5.8 no estan los helpers en laravel
 
 
 Migrate
