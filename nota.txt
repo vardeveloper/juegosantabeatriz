@@ -5,14 +5,18 @@ DOSC
 https://docs.laravelvoyager.com/
 
 CREDENTIALS
+-----------
+SUPERADMIN
 admin@admin.com
-password
+admin@2020.
 
-EMAIL
-ventas@juegosantabeatriz.pe
-ventas@2019
+ADMIN
 aazabache@hotmail.com
 aazabache@2019
+
+WEBMAIL
+ventas@juegosantabeatriz.pe
+ventas@2019
 
 SETUP
 - PROJECT
